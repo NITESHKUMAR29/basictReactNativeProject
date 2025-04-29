@@ -49,5 +49,5 @@ Before you begin, ensure that you have the following installed:
    npm install
 3.**Install Expo CLI**
    ```bash
-npm install -g expo-cli
-npx expo start
+   npm install -g expo-cli
+   npx expo start
