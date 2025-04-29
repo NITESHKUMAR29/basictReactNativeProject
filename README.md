@@ -66,3 +66,18 @@ Each directory and file serves a specific purpose to ensure that the app remains
 - **App.tsx**: The main entry point of the application.
 
 This structure follows modern best practices for React Native applications and should provide a solid foundation for further development.
+
+## Technologies Used
+
+This project utilizes several technologies and libraries to achieve a modern and efficient app architecture:
+
+- **React Native**: A JavaScript framework for building native mobile apps.
+- **TypeScript**: A superset of JavaScript that provides type safety and better tooling support.
+- **Expo**: A framework that simplifies the development and deployment of React Native apps.
+- **Axios**: A promise-based HTTP client for making API requests.
+- **React Navigation**: A navigation library for managing app screens and routes.
+- **React Query**: A data-fetching and caching library to simplify managing server state.
+- **Styled Components**: A CSS-in-JS library used for styling the app components.
+- **React Context**: A React API used to manage global app state (if needed).
+
+
