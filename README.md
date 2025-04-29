@@ -55,6 +55,14 @@ Before you begin, ensure that you have the following installed:
 
 
 ## File Structure
-NewNewsApp/ ├── assets/ # Static assets (images, icons, etc.) ├── node_modules/ # Installed node packages ├── src/ │ ├── components/ # Reusable UI components (e.g., NewsCard) │ │ └── NewsCard.tsx # A component to render individual news articles │ ├── services/ # API service layer for fetching data │ │ └── newsApi.ts # Contains the API functions to fetch news data │ ├── types/ # TypeScript types and interfaces │ │ └── news.d.ts # TypeScript types for the news API response │ ├── App.tsx # Main app entry point │ └── utils/ # Utility functions (e.g., formatters, helpers) │ └── formatDate.ts # Helper function to format dates ├── .gitignore # Git ignore file ├── app.json # Expo configuration ├── package.json # Project dependencies and scripts ├── tsconfig.json # TypeScript configuration └── README.md # Project documentation (this file)
+Each directory and file serves a specific purpose to ensure that the app remains modular, maintainable, and scalable:
 
+- **assets/**: Stores static resources like images and icons.
+- **node_modules/**: Contains installed dependencies.
+- **src/components/**: Houses reusable components like `NewsCard.tsx` for rendering individual news articles.
+- **src/services/**: Contains logic for API calls. In this case, `newsApi.ts` handles the fetching of news data.
+- **src/types/**: TypeScript types and interfaces for defining the shape of data, such as `news.d.ts` for news data.
+- **src/utils/**: Contains helper functions like `formatDate.ts` to format dates or perform other utility tasks.
+- **App.tsx**: The main entry point of the application.
 
+This structure follows modern best practices for React Native applications and should provide a solid foundation for further development.
