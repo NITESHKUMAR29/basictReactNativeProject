@@ -11,10 +11,8 @@ This is a React Native project that pulls the latest news articles using an API.
 - [Prerequisites](#prerequisites)
 - [Installation Guide](#installation-guide)
 - [File Structure](#file-structure)
-- [Running the App](#running-the-app)
-- [Project Architecture](#project-architecture)
 - [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
+
 
 ---
 
