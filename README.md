@@ -52,3 +52,24 @@ Before you begin, ensure that you have the following installed:
     ```bash
    npm install -g expo-cli
    npx expo start
+
+
+## File Structure
+NewNewsApp/
+├── assets/                        # Static assets (images, icons, etc.)
+├── node_modules/                  # Installed node packages
+├── src/
+│   ├── components/                # Reusable UI components (e.g., NewsCard)
+│   │   └── NewsCard.tsx           # A component to render individual news articles
+│   ├── services/                  # API service layer for fetching data
+│   │   └── newsApi.ts             # Contains the API functions to fetch news data
+│   ├── types/                     # TypeScript types and interfaces
+│   │   └── news.d.ts              # TypeScript types for the news API response
+│   ├── App.tsx                    # Main app entry point
+│   └── utils/                     # Utility functions (e.g., formatters, helpers)
+│       └── formatDate.ts          # Helper function to format dates
+├── .gitignore                     # Git ignore file
+├── app.json                        # Expo configuration
+├── package.json                   # Project dependencies and scripts
+├── tsconfig.json                  # TypeScript configuration
+└── README.md                      # Project documentation (this file)
