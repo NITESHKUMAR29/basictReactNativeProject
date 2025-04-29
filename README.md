@@ -45,4 +45,5 @@ Before you begin, ensure that you have the following installed:
    cd NewNewsApp
 
 2. **Install dependencies**
+    ```bash
    npm install
