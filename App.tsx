@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import NewsScreen from './src/screens/NewsScreen';
-import NewsCard from './src/components/NewsCard';
+import NewsScreen from './src/screens/PujaScreen';
+import NewsCard from './src/components/PujaCard';
 
 
 export default function App() {

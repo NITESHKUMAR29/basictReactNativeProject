@@ -7,13 +7,12 @@ import {
   StyleSheet,
   Dimensions,
 } from 'react-native';
-
-import LinearGradient from 'react-native-linear-gradient';
+import { Event } from '../types/puja';
 
 const { width } = Dimensions.get('window');
 
 interface PujaCardProps {
-  value: any;
+  value: Event; // Updated to match the Event type from the provided data
   idx: number;
   onPress: () => void;
 }
@@ -23,23 +22,30 @@ const PujaCard: React.FC<PujaCardProps> = ({ value, idx, onPress }) => {
   const templeCity = value?.Event_Config?.Temple?.city;
   const dateName = value?.Event_Config?.Timeline?.name;
   const eventDate = value?.Event_Config?.Timeline?.date;
+  const mainBenefit = value?.mainBenefit || '';
+  const participantCount = value?.participantCount || '0';
+  const eventName = value?.name;
 
   return (
     <TouchableOpacity onPress={onPress} activeOpacity={0.8} style={styles.card}>
+      {/* Event Image */}
       <Image source={{ uri: value?.images[0] }} style={styles.image} />
 
       <View style={styles.content}>
+        {/* Event Name */}
         <Text numberOfLines={2} style={styles.name}>
-          {value?.name}
+          {eventName}
         </Text>
 
-        {value?.mainBenefit ? (
+        {/* Event Benefit */}
+        {mainBenefit ? (
           <Text numberOfLines={2} style={styles.benefit}>
-            {value?.mainBenefit}
+            {mainBenefit}
           </Text>
         ) : null}
 
         <View style={styles.infoContainer}>
+          {/* Temple Information */}
           <View style={styles.iconTextRow}>
             <Image
               source={require('../assets/temple.png')}
@@ -51,6 +57,7 @@ const PujaCard: React.FC<PujaCardProps> = ({ value, idx, onPress }) => {
             </Text>
           </View>
 
+          {/* Event Date and Timeline */}
           <View style={styles.iconTextRow}>
             <Image
               source={require('../assets/calendar.png')}
@@ -63,9 +70,10 @@ const PujaCard: React.FC<PujaCardProps> = ({ value, idx, onPress }) => {
         </View>
       </View>
 
+      {/* Footer: Participant Count and Book Button */}
       <View style={styles.footer}>
         <Text style={styles.footerText}>
-          {value?.participantCount}+ Booked
+          {participantCount}+ Booked
         </Text>
         <TouchableOpacity style={styles.button} onPress={onPress}>
           <Text style={styles.buttonText}>Book Puja</Text>
@@ -96,7 +104,7 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '1A2B3C',
+    color: '#1A2B3C',
   },
   benefit: {
     fontSize: 14,

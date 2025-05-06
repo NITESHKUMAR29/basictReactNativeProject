@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Article } from '../types/news';
-import { fetchTopHeadlines } from '../services/newsService';
+import { fetchTopHeadlines } from '../services/apis/pujaService';
 
 export const useNews = () => {
   const [articles, setArticles] = useState<Article[]>([]);
