@@ -1,5 +1,5 @@
 export interface GetPujaParams {
-    eventType: string;
+    eventType?: string;
     page: number;
     language?: string;
     query?: string;
