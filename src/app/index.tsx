@@ -1,13 +1,37 @@
-import { Link } from "expo-router";
-import React from "react";
-import { Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import PujaSreen from "../components/screens/puja/PujaSreen";
+import { useEffect, useState } from "react";
+import { getAllEvents } from "../apis/puja/puja";
+import { Text } from "react-native";
 
 export default function Index() {
+  const [allData, setAllData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const getAllData = async () => {
+    try {
+      setLoading(true);
+      const res = await getAllEvents({
+        eventType: "111",
+        page: 0,
+      });
+
+      if (res) {
+        setAllData(res);
+      }
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    getAllData();
+  }, []);
+
   return (
-    <View className="flex-1 items-center justify-center">
-      <Link href="/puja">
-        <Text className="text-red-500">Puja</Text>
-      </Link>
-    </View>
+    <SafeAreaView className="flex-1 ">
+      {loading ? <Text>Loading...</Text> : <PujaSreen data={allData} />}
+    </SafeAreaView>
   );
 }
