@@ -17,6 +17,7 @@ export const getAllEvents = async ({
         language: language || "en",
       },
     });
+    console.log(response.data)
 
     return response.data;
   } catch (error) {
