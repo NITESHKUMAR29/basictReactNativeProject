@@ -1,0 +1,15 @@
+class PreferenceManager {
+  cognitoToken: string | null = null;
+  accessToken: string | null = null;
+  language: string | null = "en";
+
+  constructor() {
+    this.cognitoToken =
+      "eyJraWQiOiI3NUJYbzN2bExGMThxQVBRY0FxSkkxa1JoT3IzVkFmNTVocm9BZGtCaXU4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIzbjVvNjh2bmJhODFoYWsxNzUzNmhpbzM3OSIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiZGVmYXVsdC1tMm0tcmVzb3VyY2Utc2VydmVyLWxubDcyalwvcmVhZCIsImF1dGhfdGltZSI6MTc0MjIxMTQ4MSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLmFwLXNvdXRoLTEuYW1hem9uYXdzLmNvbVwvYXAtc291dGgtMV9ONFhLRlEybEQiLCJleHAiOjE3NDIyOTc4ODEsImlhdCI6MTc0MjIxMTQ4MSwidmVyc2lvbiI6MiwianRpIjoiN2U1MzM5OTktMmQwZC00YmI3LTg1ZDItMGJhYzMwNzAxYTIyIiwiY2xpZW50X2lkIjoiM241bzY4dm5iYTgxaGFrMTc1MzZoaW8zNzkifQ.LRJDuDGN1ttfYVmBLk9CxpBqAasU3xx3QlXXEReuiIiPsZTos2tBpbCYfhwsTgaXPNPkSS8dzESWDj03vbKzj2avAe2RjjhdaOBsDCFOrhKLsuXu-_Ql1B-qw_rXHloOs3HOD-AgRR7r4rlidBAVSmSU9XIdFjWMaCDJOL_XofO5IpHDH_TTODbpsg7sDEsbiUpBE_lorwgWHCyWo8r3Vbk9hkCHgY-MYDA1Ymp1nXsWQRYf9f02glB3uqqGVKAEwQmk3ux0VjM3RozmL1KBglF6PhadXoVWB7Ibr4LQ_96sfIJJrGqrzh-d_jSHzIVwLsgGHDT-rZP9cCPn7C4EWw";
+    this.accessToken =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoSUQiOiIrOTE5MTIzNDcxMjk2IiwiYXV0aFR5cGUiOiIxNzY2IiwidWlkIjoiSEsxOW5OZUNYZlQ2THhVeXE0cGZmSzBTdHgwMyIsIm5hbWUiOiJOSVRFU0ggS1VNQVIgTUFOREFMIiwiaWF0IjoxNzQ3MTM2OTQyLCJleHAiOjE3NDcyMjMzNDJ9.IxLUtc2LwkhJhbEt3lTyTOE3jJWTz5A8nCeWU-Snvf0";
+    this.language = "en";
+  }
+}
+
+export const preferences = new PreferenceManager();
